@@ -5,6 +5,16 @@
 # tested on Linux
 
 import io
+# Must use Qt backend, otherwise following error
+#QGuiApplication: Must construct a QGuiApplication before accessing a QClipboard
+#Traceback (most recent call last):
+#  File "/usr/lib/python3.8/site-packages/matplotlib/cbook/__init__.py", line 224, in process
+#    func(*args, **kwargs)
+#  File "/home/junfeng/git/mpl2clipboard/mpl2clipboard/mpl2clipboard.py", line 29, in clipboard_handler
+#    QApplication.clipboard().setImage(QImage.fromData(buf.getvalue()))
+#AttributeError: 'NoneType' object has no attribute 'setImage'
+import matplotlib
+matplotlib.use('Qt5Agg')
 import matplotlib.pyplot as plt
 from PySide2.QtWidgets import QApplication
 from PySide2.QtGui import QImage
