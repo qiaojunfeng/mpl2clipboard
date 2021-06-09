@@ -16,8 +16,12 @@ import io
 import matplotlib
 matplotlib.use('Qt5Agg')
 import matplotlib.pyplot as plt
-from PySide2.QtWidgets import QApplication
-from PySide2.QtGui import QImage
+try:
+    from PySide2.QtWidgets import QApplication
+    from PySide2.QtGui import QImage
+except ImportError as e:
+    from PyQt5.QtWidgets import QApplication
+    from PyQt5.QtGui import QImage
 
 def add_clipboard_to_figures():
     # use monkey-patching to replace the original plt.figure() function with
