@@ -1,5 +1,5 @@
 # mpl2clipboard
-Copy matplotlib image to clipboard
+Copy matplotlib image to clipboard when pressing `Ctrl+C`.
 
 ## Installation
 ```
