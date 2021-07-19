@@ -1,6 +1,13 @@
 # mpl2clipboard
 Copy matplotlib image to clipboard
 
+## Installation
+```
+git clone https://github.com/qiaojunfeng/mpl2clipboard.git
+cd mpl2clipboard/
+pip install .
+```
+
 ## Usage
 
 ```python
