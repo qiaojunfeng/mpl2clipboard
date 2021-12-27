@@ -8,7 +8,7 @@ setup(
     license='MIT',
     description='Copy matplotlib image to clipboard',
     long_description=open('README.md').read(),
-    install_requires=['matplotlib', 'PySide2'],
+    install_requires=['matplotlib', 'PySide6'],
     url='https://github.com/qiaojunfeng/mpl2clipboard',
     author='Junfeng Qiao',
     author_email='qiaojunfeng@outlook.com'
