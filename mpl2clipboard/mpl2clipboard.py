@@ -14,7 +14,7 @@ import io
 #    QApplication.clipboard().setImage(QImage.fromData(buf.getvalue()))
 #AttributeError: 'NoneType' object has no attribute 'setImage'
 import matplotlib
-matplotlib.use('Qt5Agg')
+matplotlib.use('QtAgg')
 import matplotlib.pyplot as plt
 try:
     from PySide6.QtWidgets import QApplication
@@ -24,8 +24,8 @@ except ImportError as exc:
         from PySide2.QtWidgets import QApplication
         from PySide2.QtGui import QImage
     except ImportError as e:
-        from PyQt5.QtWidgets import QApplication
-        from PyQt5.QtGui import QImage
+        from PyQt6.QtWidgets import QApplication
+        from PyQt6.QtGui import QImage
 
 def add_clipboard_to_figures():
     # use monkey-patching to replace the original plt.figure() function with
